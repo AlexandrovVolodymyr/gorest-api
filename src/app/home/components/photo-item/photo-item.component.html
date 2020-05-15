@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <mat-icon aria-hidden="false" aria-label="back"
+            [routerLink]="['/home', 'photos']">keyboard_backspace</mat-icon>
+</mat-toolbar>
+
+<div class="container">
+  <div class="photo" *ngIf="photo">
+    <div class="photo-image">
+      <img src="{{photo.url}}" alt="{{photo.id}}">
+    </div>
+    <div class="photo-title">{{photo.title}}</div>
+  </div>
+</div>

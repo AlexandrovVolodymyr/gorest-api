@@ -1,0 +1,15 @@
+.user {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+
+  .user-last-name {
+    margin-left: 5px;
+  }
+}
+
+mat-icon {
+  cursor: pointer;
+}

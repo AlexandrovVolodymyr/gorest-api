@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <mat-icon aria-hidden="false" aria-label="back"
+            [routerLink]="['/home', 'users']">keyboard_backspace</mat-icon>
+</mat-toolbar>
+<div class="container">
+  <div class="user" *ngIf="user">
+    <div class="user-name">{{user.first_name}}</div>
+    <div class="user-last-name">{{user.last_name}}</div>
+  </div>
+  <div class="albums">
+    <div class="albums-title text-center">Albums</div>
+    <div class="album" *ngFor="let album of albums">
+      <div class="album-id">{{album.id}}</div>
+      <div class="album-title">{{album.title}}</div>
+    </div>
+  </div>
+</div>

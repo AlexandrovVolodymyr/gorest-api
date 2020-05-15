@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <mat-icon aria-hidden="false" aria-label="back" [routerLink]="['/home', 'albums']">keyboard_backspace</mat-icon>
+</mat-toolbar>
+
+<div class="container">
+  <ng-container *ngIf="photos && photos.length; else description">
+    <div class="photos">
+      <div *ngFor="let photo of photos" class="photo-card">
+        <img src="{{photo.thumbnail}}" alt="{{photo.id}}">
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #description>
+    <p class="text-center">No photos at this Album</p>
+  </ng-template>
+</div>
+

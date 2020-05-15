@@ -1,0 +1,24 @@
+.main, .content, .page-container {
+  height: 100%;
+}
+
+.mat-list-item {
+  font-weight: 100;
+
+  &.mat-tab-link {
+    font-weight: 500;
+  }
+}
+
+.mat-drawer-content {
+  mat-toolbar {
+    display: none;
+    @media screen and (max-width: 600px) {
+      display: flex;
+    }
+  }
+}
+
+.sidebar {
+  width: 200px;
+}

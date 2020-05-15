@@ -1,0 +1,18 @@
+.photo {
+  margin-top: 15px;
+  .photo-image {
+    img {
+      border-radius: 2px;
+      max-width: 100%;
+    }
+  }
+
+  .photo-title {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+mat-icon {
+  cursor: pointer;
+}

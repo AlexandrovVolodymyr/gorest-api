@@ -1,0 +1,18 @@
+<div class="photos-container">
+  <form class="photos-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="search" name="search">
+    </mat-form-field>
+  </form>
+  <div class="photos">
+    <ng-container *ngFor="let photo of photos$ | async | searchImageTitle: search">
+      <div class="photo-card" [routerLink]="['/home', 'photos', photo.id]">
+        <div class="photo-image">
+          <img src="{{photo.thumbnail}}" alt="{{photo.id}}" title="{{photo.id}}">
+        </div>
+        <div class="photo-title" [innerHTML]="photo.title | highlightText : search"></div>
+      </div>
+    </ng-container>
+  </div>
+</div>

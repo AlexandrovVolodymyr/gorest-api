@@ -1,0 +1,19 @@
+.users {
+  .filters-form {
+    padding: 15px;
+
+    mat-label, input {
+      font-size: 14px;
+    }
+  }
+
+  table {
+    &::ng-deep {
+      tbody {
+        tr {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

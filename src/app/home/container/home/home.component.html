@@ -1,0 +1,28 @@
+<main class="main">
+  <mat-drawer-container class="page-container" (backdropClick)="backdropClick()">
+    <mat-drawer [mode]="mode" class="sidebar" [opened]="isOpen">
+      <mat-list class="mat-nav-list">
+        <mat-list-item matRipple [routerLink]="['/home', 'users']" routerLinkActive="mat-tab-link">
+          Users
+        </mat-list-item>
+        <mat-list-item matRipple [routerLink]="['/home', 'albums']" routerLinkActive="mat-tab-link">
+          Albums
+        </mat-list-item>
+        <mat-list-item matRipple [routerLink]="['/home', 'photos']" routerLinkActive="mat-tab-link">
+          Photos
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button
+                *ngIf="isOpen === false"
+                (click)="isOpen = true">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</main>
+
