@@ -53,4 +53,5 @@ import { UserComponent } from './components/user/user.component';
     ReactiveFormsModule
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+}
